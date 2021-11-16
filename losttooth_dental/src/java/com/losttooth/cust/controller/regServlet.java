@@ -32,8 +32,10 @@ public class regServlet extends HttpServlet {
         String pass = request.getParameter("password");
         String cpass = request.getParameter("confirmPassword");
         
-        if (pass != cpass || pass == null || cpass == null){
-            response.sendRedirect("pass_error.html?PasswordError");
+        if (!(pass.equals(cpass))){
+            response.sendRedirect("pass_missmatch.html?Password miss match error");
+            } else if (pass.isEmpty() || cpass.isEmpty()) {
+                response.sendRedirect("pass_error.html?Blank password error");
             } else {
 
         String firstname = request.getParameter("firstname");

@@ -10,7 +10,7 @@
             //alert("Passwords Do not match");
             cPass.setCustomValidity("Passwords do not match");
             document.getElementById("password").style.borderColor = "#E34234";
-            document.getElementById("confirm_password").style.borderColor = "#E34234";
+            document.getElementById("confirmPassword").style.borderColor = "#E34234";
             }
             else {
             cpass.setCustomValidity('');

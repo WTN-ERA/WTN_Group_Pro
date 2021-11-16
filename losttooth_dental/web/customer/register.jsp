@@ -50,7 +50,7 @@
                     <div class="mb-3"></div><label class="form-label" for="password">Password</label>
                         <input class="form-control" type="password" id="password" name="password">
                     <div class="mb-3"></div><label class="form-label" for="confirmPassword">Confirm Password</label>
-                        <input class="form-control" type="password" id="confirm_password">
+                        <input class="form-control" type="password" id="confirmPassword" name="confirmPassword">
                         <div class="mb-3"></div><button class="btn btn-primary mx-auto d-block btn-disabled" type="submit" onclick="javascript:validatePass()">Register</button>
                 </form>
             </div>
@@ -96,21 +96,8 @@
         </div>
     </footer>
     
-    <script>
-        
-        function validatePass(){
-
-            if(document.regForm.password.value!=document.regForm.confirmPassword.value){
-                alert("New Password and Confirm Password should be same! Re-enter confirm-password!");
-            document.regForm.confirmPassword.value="";
-            return false;
-            }
-            return true;
-            }
-    
-    </script>
-
     <script src="../assets/js/jquery.min.js"></script>
+    <script src="../assets/js/register.js"></script>
     <script src="../assets/bootstrap/js/bootstrap.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/baguettebox.js/1.10.0/baguetteBox.min.js"></script>
     <script src="../assets/js/script.min.js"></script>
