@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app version="4.0" xmlns="http://xmlns.jcp.org/xml/ns/javaee" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_4_0.xsd">
+    <servlet>
+        <servlet-name>LoginServlet</servlet-name>
+        <servlet-class>LoginServlet</servlet-class>
+    </servlet>
+    <servlet>
+           <init-param>
+	    	<param-name>jdbcDriver</param-name>
+	    	<param-value>com.mysql.cj.jdbc.Driver</param-value>
+	    </init-param>
+	    <init-param>
+		    <param-name>dbURL</param-name>
+		    <param-value>jdbc:mysql://localhost:3306/dental_losttooth?useSSL=false</param-value>
+	    </init-param>
+	  	<init-param>
+		    <param-name>dbUserName</param-name>
+		    <param-value>root</param-value>
+	    </init-param>
+	  	<init-param>
+		    <param-name>dbPassword</param-name>
+		    <param-value>password</param-value>
+	    </init-param>
+    </servlet>
+    <servlet>
+    	<servlet-name>Index</servlet-name>
+    	<jsp-file>index.jsp</jsp-file>
+    </servlet>
+    <servlet>
+    	<servlet-name>Schedule</servlet-name>
+    	<jsp-file>/customer/c_schedule.jsp</jsp-file>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>LoginServlet</servlet-name>
+        <url-pattern>/Login</url-pattern>
+    </servlet-mapping>
+    <session-config>
+        <session-timeout>
+            10
+        </session-timeout>
+    </session-config>
+    
+    <welcome-file-list>
+       <welcome-file>index.jsp</welcome-file>
+    </welcome-file-list>
+</web-app>
+</web-app>
+
+
+
+
+
+    
+    <servlet>
+    	<servlet-name>Student</servlet-name>
+    	<jsp-file>/jsp/student.jsp</jsp-file>
+    </servlet>
+
+    <servlet>
+    	<servlet-name>Teacher</servlet-name>
+    	<jsp-file>/jsp/teacher.jsp</jsp-file>
+    </servlet>
+
+    <servlet>
+    	<servlet-name>Admin</servlet-name>
+    	<jsp-file>/jsp/admin.jsp</jsp-file>
+    </servlet> 
+            
+    <servlet-mapping>
+    	<servlet-name>Index</servlet-name>
+    	<url-pattern>/index.jsp</url-pattern>
+    </servlet-mapping>
+    
+    <servlet-mapping>
+    	<servlet-name>Student</servlet-name>
+    	<url-pattern>/student.jsp</url-pattern>
+    </servlet-mapping>
+    
+    <servlet-mapping>
+    	<servlet-name>Teacher</servlet-name>
+    	<url-pattern>/teacher.jsp</url-pattern>
+    </servlet-mapping>
+    
+    <servlet-mapping>
+    	<servlet-name>Admin</servlet-name>
+    	<url-pattern>/admin.jsp</url-pattern>
+    </servlet-mapping> 
+ 
+	<servlet-mapping>
+       <servlet-name>LoginServlet</servlet-name>
+       <url-pattern>/login</url-pattern>
+    </servlet-mapping>   
+
+    <session-config>
+       <session-timeout>10</session-timeout>
+    </session-config>
+        
